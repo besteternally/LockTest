@@ -40,7 +40,6 @@
 
 -(void)showSafeCode:(NSString *)tip{
     //带文本的弹出框
-    UITextField *textfieldSafe=nil;
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"请输入安全码" message:tip preferredStyle:UIAlertControllerStyleAlert];
     [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField){
         textField.placeholder = @"请输入安全码";
