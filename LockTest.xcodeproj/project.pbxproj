@@ -15,6 +15,7 @@
 		801F8557218FD02100F4C6C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 801F8556218FD02100F4C6C6 /* main.m */; };
 		801F8561218FD02200F4C6C6 /* LockTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 801F8560218FD02200F4C6C6 /* LockTestTests.m */; };
 		801F856C218FD02200F4C6C6 /* LockTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 801F856B218FD02200F4C6C6 /* LockTestUITests.m */; };
+		801F8639219018E900F4C6C6 /* secondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 801F8638219018E900F4C6C6 /* secondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		801F8567218FD02200F4C6C6 /* LockTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LockTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		801F856B218FD02200F4C6C6 /* LockTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LockTestUITests.m; sourceTree = "<group>"; };
 		801F856D218FD02200F4C6C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		801F8637219018C200F4C6C6 /* secondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = secondViewController.h; sourceTree = "<group>"; };
+		801F8638219018E900F4C6C6 /* secondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = secondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				801F8552218FD02100F4C6C6 /* LaunchScreen.storyboard */,
 				801F8555218FD02100F4C6C6 /* Info.plist */,
 				801F8556218FD02100F4C6C6 /* main.m */,
+				801F8637219018C200F4C6C6 /* secondViewController.h */,
+				801F8638219018E900F4C6C6 /* secondViewController.m */,
 			);
 			path = LockTest;
 			sourceTree = "<group>";
@@ -262,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				801F8639219018E900F4C6C6 /* secondViewController.m in Sources */,
 				801F854C218FD02000F4C6C6 /* ViewController.m in Sources */,
 				801F8557218FD02100F4C6C6 /* main.m in Sources */,
 				801F8549218FD02000F4C6C6 /* AppDelegate.m in Sources */,
