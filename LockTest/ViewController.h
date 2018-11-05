@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
-
+-(void)showError:(NSString *)errorMsg;
+-(void)showSafeCode:(NSString *)tip;
 @end
 
