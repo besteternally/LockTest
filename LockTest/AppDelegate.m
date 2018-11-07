@@ -17,6 +17,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window=[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor=[UIColor whiteColor];
+    NSString *path=[[NSBundle mainBundle]pathForResource:@"data" ofType:@"plist"];
+    NSDictionary *userlist=[NSDictionary dictionaryWithContentsOfFile:path];
+    UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *vc2 = [story instantiateViewControllerWithIdentifier:@"2"];
+    UIViewController *vc1 = [story instantiateViewControllerWithIdentifier:@"1"];
+    if(userlist[@"UserName"]==nil){
+        self.window.rootViewController=vc1;
+    }else{
+        self.window.rootViewController=vc2;
+    }
+    [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 

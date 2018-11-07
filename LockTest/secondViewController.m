@@ -30,6 +30,12 @@
      //设置placeholder的颜色
     self.textField1.attributedPlaceholder=[[NSAttributedString alloc]initWithString:@"hello" attributes:@{NSForegroundColorAttributeName:[UIColor blackColor]}];
     self.textfield5.attributedPlaceholder=[[NSAttributedString alloc]initWithString:@"-" attributes:@{NSForegroundColorAttributeName:[UIColor blackColor]}];
+    
+    NSString *path=[[NSBundle mainBundle]pathForResource:@"data" ofType:@"plist"];
+    NSDictionary *userlist=[NSDictionary dictionaryWithContentsOfFile:path];
+    if(userlist!=nil){
+        _textField1.text=userlist[@"UserName"];
+    }
    // self.methodtip= [[ViewController alloc]init];
     
 }
@@ -43,10 +49,19 @@
     }];
     
     //判断是不是是否输入安全码
-    [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:/*^(UIAlertAction *quedin){
+    [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *quedin){
+        NSFileManager *fileMger = [NSFileManager defaultManager];
+        //输入安全码，注销用户，退出程序。
+        NSString *path=[[NSBundle mainBundle]pathForResource:@"data" ofType:@"plist"];
         
-        [self performSegueWithIdentifier:@"control" sender:self];
-    }*/nil]];
+        BOOL bRet = [fileMger fileExistsAtPath:path];
+        if (bRet) {
+            NSLog(@"用户已经被注销！");
+            NSError *err;
+            [fileMger removeItemAtPath:path error:&err];
+        }
+        exit(0);
+    }]];
     [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil]];
     
     [self presentViewController:alertController animated:true completion:nil];
@@ -56,6 +71,7 @@
 
 - (IBAction)unBind {
     [self showSafeCode:@"安全码"];
+    
 }
 
 - (IBAction)lock {

@@ -26,7 +26,7 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     //设置placeholder的颜色
-   self.textField1.attributedPlaceholder=[[NSAttributedString alloc]initWithString:@"-" attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+   self.textField1.attributedPlaceholder=[[NSAttributedString alloc]initWithString:@"Alice126" attributes:@{NSForegroundColorAttributeName:[UIColor blackColor]}];
 
 
     
@@ -60,20 +60,31 @@
 
 - (IBAction)onClick {
     NSString *lock=[self.textfield2.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    NSString *user=[self.textfield3.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet] ];
+    NSString *username=[self.textfield3.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet] ];
     if([lock isEqualToString:@""]){
         [self showError:@"请输入你要绑定的门锁！"];
         return;
     }
-    if ([user isEqualToString:@""]) {
+    if ([username isEqualToString:@""]) {
         [self showError:@"请输入操作门锁的用户！"];
         return;
+    }
+    else{
+        NSDictionary *users=@{
+                             @"UserName":username,
+                             @"DoorId":lock
+                             };
+        NSString *path=[[NSBundle mainBundle]pathForResource:@"data" ofType:@"plist"];
+        BOOL flag=[users writeToFile:path atomically:YES];
+        if(flag){
+            NSLog(@"写入成功");
+            NSLog(@"%@",path);
+        }
     }
     [self showSafeCode:@"安全码"];
    
     
-    
-  
+
     
     
    
