@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textField1;
@@ -47,8 +48,16 @@
     
     //判断是不是是否输入安全码
     [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *quedin){
-      
-        [self performSegueWithIdentifier:@"control" sender:self];
+      AppDelegate *safe = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+        if([[alertController textFields][0].text isEqualToString:safe.safecode]) {
+            [self performSegueWithIdentifier:@"control" sender:self];
+            NSLog(@"chenggong");
+        }
+        else{
+            UIAlertController *error=[UIAlertController alertControllerWithTitle:@"安全码错误！" message:nil preferredStyle:UIAlertControllerStyleAlert];
+            [error addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
+            [self presentViewController:error animated:true completion:nil];
+        }
     }]];
     [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil]];
     

@@ -104,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-540" y="-64.436619718309856"/>
+            <point key="canvasLocation" x="-568" y="-3"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="KsA-IH-1NK">
@@ -161,18 +161,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eBz-ZV-bwd">
-                                <rect key="frame" x="57" y="347" width="66" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="开锁"/>
-                                <connections>
-                                    <action selector="lock" destination="Ciw-0H-2MT" eventType="touchUpInside" id="pkR-wD-lB1"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lfD-fR-0hS">
-                                <rect key="frame" x="136" y="192" width="66" height="30"/>
+                                <rect key="frame" x="140" y="197" width="66" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -181,14 +171,24 @@
                                     <action selector="unBind" destination="Ciw-0H-2MT" eventType="touchUpInside" id="yWd-uB-Qgg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6l7-4t-9CD">
-                                <rect key="frame" x="189" y="347" width="66" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VqS-yp-e8K">
+                                <rect key="frame" x="214" y="367" width="66" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="开锁"/>
+                                <connections>
+                                    <action selector="unlock" destination="Ciw-0H-2MT" eventType="touchUpInside" id="d15-C7-27h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tdc-yX-7f3">
+                                <rect key="frame" x="69" y="367" width="66" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="上锁"/>
                                 <connections>
-                                    <action selector="unLock" destination="Ciw-0H-2MT" eventType="touchUpInside" id="o4k-Tx-zLX"/>
+                                    <action selector="lock" destination="Ciw-0H-2MT" eventType="touchUpInside" id="wzc-hk-yPE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -201,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d2n-hd-inV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="271.875" y="-64.436619718309856"/>
+            <point key="canvasLocation" x="248" y="-3"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="eju-tO-bn3">

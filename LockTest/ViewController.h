@@ -12,5 +12,6 @@
 
 -(void)showError:(NSString *)errorMsg;
 -(void)showSafeCode:(NSString *)tip;
+
 @end
 

@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (strong,nonatomic) NSString *safecode;
+@property (strong,nonatomic) NSString *lockstate;
 
 @end
 
